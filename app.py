@@ -13,7 +13,7 @@ CORS(app)
 def display_info():
     info = {
             "email": "toruwalt1997@gmail.com",
-            "current_datetime": datetime.now().isoformat(),
+            "current_datetime": datetime.now().strftime("%Y-%m-%dT%H:%M:%SZ"),
             "github_url": "https://github.com/toruwalt/hng12-backend-stage0"
             }
 
