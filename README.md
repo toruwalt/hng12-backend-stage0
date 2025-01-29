@@ -11,3 +11,24 @@ Develop a public API that returns the following information in JSON format:
  - GitHub URL: The GitHub URL of the project's codebase.
 
 This project demonstrates basic API development skills and the ability to handle simple data requests.
+
+
+## API Documenatation
+API Name:
+    Public API
+
+Base URL:
+    https://hng12-backend-stage0-faub.onrender.com
+
+Endpoint URL:
+    /
+
+Response format:
+    {
+        "current_datetime": "2025-01-29T19:44:47Z",
+        "email": "toruwalt1997@gmail.com",
+        "github_url": "https://github.com/toruwalt/hng12-backend-stage0"
+    }
+    
+
+[https://hng.tech/hire/python-developers](https://hng.tech/hire/python-developers)
