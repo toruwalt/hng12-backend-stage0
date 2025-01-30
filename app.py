@@ -9,20 +9,19 @@ from datetime import datetime, timezone
 app = Flask(__name__)
 CORS(app)
 
-# Get current time in UTC
-current_time_utc = datetime.now(timezone.utc)
+#Info Details
+email = "toruwalt1997@gmail.com"
+github_url = "https://github.com/toruwalt/hng12-backend-stage0"
 
-# Format as ISO 8601 with 'Z' at the end
-iso_format_with_z = current_time_utc.strftime("%Y-%m-%dT%H:%M:%SZ")
+#Disable Python Dictionary Key sorting
+app.json.sort_keys = False
 
-print(iso_format_with_z)
-
-@app.route("/", methods=['GET'])
+@app.route("/")
 def display_info():
     info = {
-            "email": "toruwalt1997@gmail.com",
-            "current_datetime": iso_format_with_z,
-            "github_url": "https://github.com/toruwalt/hng12-backend-stage0"
+            "email": email,
+            "current_datetime": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "github_url": github_url
             }
 
     return jsonify(info)
